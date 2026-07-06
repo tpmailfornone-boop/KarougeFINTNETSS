@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gym-black: #1A1A18;
+  --color-gym-gold: #EF9F27;
+  --color-gym-white: #F2EFE9;
+  
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+:root {
+  --background: #1A1A18;
+  --foreground: #F2EFE9;
+}
+
+body {
+  background-color: #1A1A18;
+  color: #F2EFE9;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* Stark grid/gritty background details */
+.grid-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(239, 159, 39, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(239, 159, 39, 0.02) 1px, transparent 1px);
+  pointer-events: none;
+}
+
+/* Premium noise grain overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(rgba(239, 159, 39, 0.04) 1px, transparent 0),
+                    radial-gradient(rgba(242, 239, 233, 0.02) 1px, transparent 0);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Keyframes for animated aurora/rays */
+@keyframes aurora-bg {
+  0% {
+    background-position: 0% 50%, 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 0% 50%;
+  }
+}
+
+.animate-aurora-bg {
+  animation: aurora-bg 15s linear infinite;
+}
+
+/* Selection colors */
+::selection {
+  background-color: #EF9F27;
+  color: #1A1A18;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1A18;
+}
+::-webkit-scrollbar-thumb {
+  background: #EF9F27;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d48b1d;
+}
