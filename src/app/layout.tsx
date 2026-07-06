@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Kourage Fitness | Premium Strength Gym Mulund West",
@@ -13,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className={cn("dark scroll-smooth", "font-sans", geist.variable)}>
       <body className="antialiased bg-gym-black text-gym-white relative min-h-screen flex flex-col">
         {/* Stark premium grain overlay */}
         <div className="grain-overlay" aria-hidden="true" />

@@ -6,6 +6,7 @@ import AnimatedRays from "@/components/ui/animated-rays";
 import TwistingRibbon from "@/components/ui/twisting-ribbon";
 import ProgramCard from "@/components/ProgramCard";
 import WhyChooseUsScroll from "@/components/WhyChooseUsScroll";
+import SpotlightNavbar from "@/components/ui/spotlight-navbar";
 
 // Custom SVG Icons to bypass lucide barrel-optimization SWC bugs
 const InstagramLogo = ({ size = 24, ...props }: React.SVGProps<SVGSVGElement> & { size?: number }) => (
@@ -81,33 +82,27 @@ export default function Home() {
     <div className="min-h-screen bg-gym-black font-sans text-gym-white flex flex-col relative select-none">
       
       {/* 1. NAV */}
-      <header className="sticky top-0 z-40 w-full border-b border-gym-white/10 bg-gym-black/90 backdrop-blur-md">
+      <header className="sticky top-0 z-40 w-full border-b border-gym-gold/15 bg-gym-black/90 backdrop-blur-md transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="#" className="font-bebas text-3xl tracking-widest text-gym-white hover:text-gym-gold transition-colors">
             KOURAGE FITNESS<span className="text-gym-gold">.</span>
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-10">
-            {["About", "Why Us", "Contact"].map((item) => {
-              const id = item.toLowerCase().replace(" ", "-");
-              return (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(id)}
-                  className="font-mono text-xs uppercase tracking-widest text-gym-white/70 hover:text-gym-gold transition-colors relative py-2 group"
-                >
-                  {item}
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gym-gold transition-all duration-300 group-hover:w-full" />
-                </button>
-              );
-            })}
-          </nav>
+          {/* Desktop Nav (Spotlight Navbar component) */}
+          <SpotlightNavbar
+            className="hidden md:flex"
+            items={[
+              { label: "About", href: "#about" },
+              { label: "Why Us", href: "#why-us" },
+              { label: "Contact", href: "#contact" },
+            ]}
+            onItemClick={(item) => scrollToSection(item.href.replace("#", ""))}
+          />
 
           <div className="hidden md:flex items-center gap-6">
             <a
               href="tel:+918169455350"
-              className="bg-gym-gold border-2 border-gym-gold text-gym-black font-bebas text-sm uppercase tracking-widest px-6 py-2.5 hover:bg-transparent hover:text-gym-gold transition-colors duration-300"
+              className="bg-gym-gold border-2 border-gym-gold text-gym-black font-bebas text-sm uppercase tracking-widest px-6 py-2.5 hover:bg-transparent hover:text-gym-gold transition-colors duration-300 hover:shadow-[0_0_15px_rgba(239,159,39,0.25)]"
             >
               Call Now
             </a>
@@ -128,7 +123,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="absolute top-20 left-0 w-full bg-gym-black border-b border-gym-white/10 px-6 py-10 flex flex-col gap-6 md:hidden z-30"
+            className="absolute top-20 left-0 w-full bg-gym-black border-b border-gym-gold/15 px-6 py-10 flex flex-col gap-6 md:hidden z-30 shadow-[0_10px_20px_rgba(239,159,39,0.03)]"
           >
             {["About", "Why Us", "Contact"].map((item) => {
               const id = item.toLowerCase().replace(" ", "-");
