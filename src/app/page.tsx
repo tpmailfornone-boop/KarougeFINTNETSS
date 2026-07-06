@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import AnimatedRays from "@/components/ui/animated-rays";
 import TwistingRibbon from "@/components/ui/twisting-ribbon";
 import ProgramCard from "@/components/ProgramCard";
+import WhyChooseUsScroll from "@/components/WhyChooseUsScroll";
 
 // Custom SVG Icons to bypass lucide barrel-optimization SWC bugs
 const InstagramLogo = ({ size = 24, ...props }: React.SVGProps<SVGSVGElement> & { size?: number }) => (
@@ -283,64 +284,8 @@ export default function Home() {
         />
       </div>
 
-      {/* 4. WHY CHOOSE US */}
-      <section id="why-us" className="py-24 md:py-32 bg-gym-black border-b border-gym-white/10 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-gym-gold">
-                WHY CHOOSE US
-              </span>
-              <h2 className="font-bebas text-5xl md:text-6xl text-gym-white uppercase tracking-wider mt-2">
-                Excellence in Every Detail
-              </h2>
-            </div>
-            <p className="font-inter text-sm md:text-base text-gym-white/50 max-w-md">
-              Discover the pillars that set us apart as Mulund&apos;s leading training environment. Hover over the cards to feel the energy.
-            </p>
-          </div>
-
-          {/* 3D card grid (6 items) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProgramCard
-              number="01"
-              title="Latest Equipment"
-              tag="STATE-OF-THE-ART"
-              description="State-of-the-art fitness equipment for optimal performance and structural safety in every movement."
-            />
-            <ProgramCard
-              number="02"
-              title="Certified Trainers"
-              tag="EXPERT COACHES"
-              description="Expert guidance from certified fitness professionals with years of coaching and biomechanics mastery."
-            />
-            <ProgramCard
-              number="03"
-              title="Personalized Plans"
-              tag="CUSTOM FIT"
-              description="Custom workout programs tailored to your goals, biometrics, and physical capabilities."
-            />
-            <ProgramCard
-              number="04"
-              title="Clean & Safe"
-              tag="HYGIENIC"
-              description="Hygienic environment with regular sanitization, ventilation, and strict cleanliness codes."
-            />
-            <ProgramCard
-              number="05"
-              title="Weight Loss Programs"
-              tag="FAT LOSS"
-              description="Scientifically designed fat loss transformations focused on maintaining active muscle volume."
-            />
-            <ProgramCard
-              number="06"
-              title="Strength & Conditioning"
-              tag="PERFORMANCE"
-              description="Build structural muscle, develop explosive athletic performance, and improve physical capacity."
-            />
-          </div>
-        </div>
-      </section>
+      {/* 4. WHY CHOOSE US (Scroll-locked Pinned Storytelling Section) */}
+      <WhyChooseUsScroll />
 
       {/* 5. MOTIVATION STRIP */}
       <section className="bg-gym-gold text-gym-black py-8 border-y-2 border-gym-black overflow-hidden relative z-20 flex items-center select-none">
