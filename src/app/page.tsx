@@ -8,7 +8,6 @@ import ProgramCard from "@/components/ProgramCard";
 import WhyChooseUsScroll from "@/components/WhyChooseUsScroll";
 import SpotlightNavbar from "@/components/ui/spotlight-navbar";
 import FounderBrand from "@/components/FounderBrand";
-import PhysiqueChallenge from "@/components/PhysiqueChallenge";
 import { cn } from "@/lib/utils";
 
 // Custom SVG Icons to bypass lucide barrel-optimization SWC bugs
@@ -121,7 +120,6 @@ export default function Home() {
               { label: "About", href: "#about" },
               { label: "Founder", href: "#founder" },
               { label: "Why Us", href: "#why-us" },
-              { label: "Challenge", href: "#challenge" },
               { label: "Contact", href: "#contact" },
             ]}
             onItemClick={(item) => scrollToSection(item.href.replace("#", ""))}
@@ -153,7 +151,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             className="absolute top-full left-0 w-full bg-bg-primary border-b border-gym-gold/15 px-6 py-10 flex flex-col gap-6 md:hidden z-30 shadow-[0_10px_20px_rgba(239,159,39,0.03)]"
           >
-            {["About", "Founder", "Why Us", "Challenge", "Contact"].map((item) => {
+            {["About", "Founder", "Why Us", "Contact"].map((item) => {
               const id = item.toLowerCase().replace(" ", "-");
               return (
                 <button
@@ -312,9 +310,6 @@ export default function Home() {
 
       {/* 4. WHY CHOOSE US (Scroll-locked Pinned Storytelling Section) */}
       <WhyChooseUsScroll />
-
-      {/* 4.5. PHYSIQUE CHALLENGE SECTION */}
-      <PhysiqueChallenge />
 
       {/* 5. MOTIVATION STRIP */}
       <section className="bg-gym-gold text-bg-primary py-8 border-y-2 border-bg-primary overflow-hidden relative z-20 flex items-center select-none">

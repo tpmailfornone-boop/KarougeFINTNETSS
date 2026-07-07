@@ -99,14 +99,19 @@ export function FounderBrand() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Visual Portfolio */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="lg:col-span-5 grid grid-cols-2 gap-4"
+          >
             <div className="relative aspect-[3/4] border-2 border-gym-gold bg-bg-surface overflow-hidden group shadow-lg">
-              <div className="absolute inset-0 bg-[#2A0D12]/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/jagesh_flag.jpg"
                 alt="Jagesh Dait representing India"
-                className="w-full h-full object-cover filter contrast-110 grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-102"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
               />
               <div className="absolute bottom-3 left-3 z-20 bg-bg-primary border border-gym-gold px-3 py-1 font-mono text-[9px] uppercase text-gym-gold tracking-widest">
                 International Tier
@@ -114,21 +119,26 @@ export function FounderBrand() {
             </div>
 
             <div className="relative aspect-[3/4] border-2 border-gym-gold bg-bg-surface overflow-hidden group shadow-lg mt-8 lg:mt-12">
-              <div className="absolute inset-0 bg-[#2A0D12]/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/jagesh_stage.jpg"
                 alt="Jagesh Dait on stage"
-                className="w-full h-full object-cover filter contrast-110 grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-102"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
               />
               <div className="absolute bottom-3 left-3 z-20 bg-bg-primary border border-gym-gold px-3 py-1 font-mono text-[9px] uppercase text-gym-gold tracking-widest">
                 Championship Stage
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Bio & Achievements */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+            className="lg:col-span-7 flex flex-col justify-center"
+          >
             <h3 className="font-bebas text-3xl md:text-4xl text-gym-white uppercase tracking-wider mb-6">
               The Face of Kourage
             </h3>
@@ -139,30 +149,46 @@ export function FounderBrand() {
 
             {/* Counters */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12">
-              <div className="border border-border-subtle bg-bg-surface p-5 flex flex-col justify-between h-28 relative group hover:border-gym-gold transition-colors duration-300">
-                <span className="font-mono text-[9px] uppercase text-gym-white/40 tracking-wider">Mr. Mumbai</span>
+              <motion.div 
+                whileHover={{ y: -6, scale: 1.03, borderColor: '#EF9F27' }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="border border-border-subtle bg-bg-surface p-5 flex flex-col justify-between h-28 relative group transition-all duration-300"
+              >
+                <span className="font-mono text-[9px] uppercase text-gym-white/45 tracking-wider">Mr. Mumbai</span>
                 <div className="flex items-baseline mt-auto">
                   <Counter value={8} suffix="x" />
                 </div>
-              </div>
-              <div className="border border-border-subtle bg-bg-surface p-5 flex flex-col justify-between h-28 relative group hover:border-gym-gold transition-colors duration-300">
-                <span className="font-mono text-[9px] uppercase text-gym-white/40 tracking-wider">Mr. Maharashtra</span>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -6, scale: 1.03, borderColor: '#EF9F27' }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="border border-border-subtle bg-bg-surface p-5 flex flex-col justify-between h-28 relative group transition-all duration-300"
+              >
+                <span className="font-mono text-[9px] uppercase text-gym-white/45 tracking-wider">Mr. Maharashtra</span>
                 <div className="flex items-baseline mt-auto">
                   <Counter value={6} suffix="x" />
                 </div>
-              </div>
-              <div className="border border-border-subtle bg-bg-surface p-5 flex flex-col justify-between h-28 relative group hover:border-gym-gold transition-colors duration-300">
-                <span className="font-mono text-[9px] uppercase text-gym-white/40 tracking-wider">Mr. India</span>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -6, scale: 1.03, borderColor: '#EF9F27' }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="border border-border-subtle bg-bg-surface p-5 flex flex-col justify-between h-28 relative group transition-all duration-300"
+              >
+                <span className="font-mono text-[9px] uppercase text-gym-white/45 tracking-wider">Mr. India</span>
                 <div className="flex items-baseline mt-auto">
                   <Counter value={3} suffix="x" />
                 </div>
-              </div>
-              <div className="border border-border-subtle bg-bg-surface p-5 flex flex-col justify-between h-28 relative group hover:border-gym-gold transition-colors duration-300">
-                <span className="font-mono text-[9px] uppercase text-gym-white/40 tracking-wider">Int&apos;l Medals</span>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -6, scale: 1.03, borderColor: '#EF9F27' }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="border border-border-subtle bg-bg-surface p-5 flex flex-col justify-between h-28 relative group transition-all duration-300"
+              >
+                <span className="font-mono text-[9px] uppercase text-gym-white/45 tracking-wider">Int&apos;l Medals</span>
                 <div className="flex items-baseline mt-auto">
                   <Counter value={3} suffix="x" />
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* TABS SELECTOR */}
@@ -199,9 +225,10 @@ export function FounderBrand() {
                   className="space-y-3"
                 >
                   {getAchievements().map((item, idx) => (
-                    <div
+                    <motion.div
                       key={idx}
-                      className="flex items-center gap-4 p-4 border border-border-subtle bg-bg-surface/50 hover:border-gym-gold/20 transition-all duration-300"
+                      whileHover={{ x: 6, borderColor: "rgba(239, 159, 39, 0.4)", backgroundColor: "rgba(61, 20, 27, 0.6)" }}
+                      className="flex items-center gap-4 p-4 border border-border-subtle bg-bg-surface/50 transition-all duration-300"
                     >
                       <div className="flex items-center justify-center shrink-0">
                         {getMedalIcon(item.medalType)}
@@ -214,13 +241,13 @@ export function FounderBrand() {
                           {item.detail}
                         </span>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </motion.div>
               </AnimatePresence>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -229,7 +256,13 @@ export function FounderBrand() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             {/* Left side: Copy */}
-            <div className="lg:col-span-7">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7"
+            >
               <span className="font-mono text-xs uppercase tracking-widest text-gym-gold">
                 The Mentor&apos;s Legacy
               </span>
@@ -258,19 +291,24 @@ export function FounderBrand() {
                   <span>Multiple Professional Bodybuilding Athletes across India</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
             {/* Right side: Portrait Frame */}
-            <div className="lg:col-span-5 flex justify-center">
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-5 flex justify-center"
+            >
               <div className="w-full max-w-[340px] border-2 border-border-subtle bg-bg-surface p-6 relative overflow-hidden flex flex-col justify-center items-center text-center group shadow-xl">
                 <div className="absolute inset-0 grid-bg-overlay opacity-20 pointer-events-none" />
                 <div className="relative w-full aspect-square border border-border-subtle overflow-hidden mb-6 bg-bg-primary">
-                  <div className="absolute inset-0 bg-[#2A0D12]/40 z-10" />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/ig_post_3.png"
                     alt="Legacy mentorship showcase"
-                    className="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-102 transition-transform duration-500"
+                    className="w-full h-full object-cover filter contrast-110 group-hover:scale-102 transition-transform duration-500"
                   />
                 </div>
                 <span className="font-mono text-[10px] text-gym-gold uppercase tracking-widest mb-2 font-semibold">
@@ -280,7 +318,7 @@ export function FounderBrand() {
                   &ldquo;Champions are forged, not born.&rdquo;
                 </p>
               </div>
-            </div>
+            </motion.div>
 
           </div>
         </div>
