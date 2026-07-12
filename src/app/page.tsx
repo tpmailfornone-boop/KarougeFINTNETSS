@@ -87,13 +87,6 @@ const galleryItems = [
     desc: "Multi-point pulley station offering variable resistance angles for total-body definition.",
   },
   {
-    id: 6,
-    image: "/gallery/IMG_9994.JPG.jpeg",
-    title: "Commercial Treadmills",
-    zone: "CARDIO ZONE",
-    desc: "High-performance Athlon running decks with advanced shock absorption and real-time pacing.",
-  },
-  {
     id: 7,
     image: "/gallery/IMG_9995.JPG.jpeg",
     title: "Aerial Yoga Studio",
