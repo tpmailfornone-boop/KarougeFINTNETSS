@@ -200,7 +200,7 @@ export function FounderBrand() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.25 }}
             className="font-bebas text-5xl sm:text-7xl md:text-9xl text-[#F2EFE9] tracking-wider mt-3 uppercase"
           >
-            Jagesh Pitaji Dait
+            Jagesh Dait
           </motion.h2>
 
           <motion.p 
@@ -258,7 +258,7 @@ export function FounderBrand() {
               </h3>
               
               <p className="font-inter text-base text-[#F2EFE9]/80 leading-relaxed mb-6">
-                With over 15 years of competitive bodybuilding, Jagesh Pitaji Dait has established a reputation for structured elite training. As the head coach of Kourage Fitness, Jagesh translates international championship protocols into result-driven routines for dedicated lifters.
+                With over 15 years of competitive bodybuilding, Jagesh Dait has established a reputation for structured elite training. As the head coach of Kourage Fitness, Jagesh translates international championship protocols into result-driven routines for dedicated lifters.
               </p>
 
               <p className="font-inter text-sm md:text-base text-gym-white/70 leading-relaxed mb-8">
@@ -270,7 +270,7 @@ export function FounderBrand() {
                   &ldquo;Every placement on the stage is a byproduct of execution. At Kourage, we do not ask for motivation — we build structural discipline.&rdquo;
                 </p>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-4 border-t border-[#5C1F27]/40 pt-4">
-                  <span className="block font-sans text-[10px] text-[#EF9F27] uppercase tracking-wider font-bold">— Jagesh Pitaji Dait</span>
+                  <span className="block font-sans text-[10px] text-[#EF9F27] uppercase tracking-wider font-bold">— Jagesh Dait</span>
                   <a 
                     href="https://www.instagram.com/jageshdait?igsh=MTEyaDJzOWhjcWE3Mg==" 
                     target="_blank" 
