@@ -402,7 +402,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3.5. FOUNDER & HEAD COACH (JAGESH PITAJI DAIT & MENTOR) */}
+      {/* 3.5. FOUNDER & MENTOR (JAGESH PITAJI DAIT & MENTOR) */}
       <FounderBrand />
       
       {/* 3.6. ELITE TRAINING PARTNER (MANISH ADVILKAR) */}

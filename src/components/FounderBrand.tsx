@@ -190,7 +190,7 @@ export function FounderBrand() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="font-sans text-xs uppercase tracking-[0.25em] text-[#EF9F27] font-bold"
           >
-            Founder & Head Coach
+            Founder & Mentor
           </motion.span>
 
           <motion.h2 
@@ -258,7 +258,7 @@ export function FounderBrand() {
               </h3>
               
               <p className="font-inter text-base text-[#F2EFE9]/80 leading-relaxed mb-6">
-                With over 15 years of competitive bodybuilding, Jagesh Dait has established a reputation for structured elite training. As the head coach of Kourage Fitness, Jagesh translates international championship protocols into result-driven routines for dedicated lifters.
+                With over 15 years of competitive bodybuilding, Jagesh Dait has established a reputation for structured elite training. As the mentor of Kourage Fitness, Jagesh translates international championship protocols into result-driven routines for dedicated lifters.
               </p>
 
               <p className="font-inter text-sm md:text-base text-gym-white/70 leading-relaxed mb-8">
@@ -312,7 +312,7 @@ export function FounderBrand() {
               Career Placements
             </h3>
             <p className="font-sans text-[10px] text-gym-white/40 uppercase tracking-widest mt-2">
-              Explore the championship achievements and honors of our head coach
+              Explore the championship achievements and honors of our mentor
             </p>
           </div>
 
