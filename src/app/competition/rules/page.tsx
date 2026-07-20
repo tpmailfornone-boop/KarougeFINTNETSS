@@ -69,7 +69,7 @@ export default function RulesPage() {
     },
     {
       title: "Posing Video Requirements",
-      content: "Entries must be a single, continuous 60-second video. No edits, cuts, filters, speed adjustments, zoom-ins, or background effects are permitted. Video must be uploaded in raw form. Poses must be performed in one continuous, unedited shot."
+      content: "The 7 poses are:\n\n1. Front Double Biceps\n2. Front Lat Spread\n3. Side Chest\n4. Side Triceps\n5. Back Double Biceps\n6. Back Lat Spread (or Rear Lat Spread)\n7. Abdominals and Thighs"
     },
     {
       title: "Mandatory Physique Poses",
